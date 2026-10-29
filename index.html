@@ -1,18 +1,19 @@
 <!doctype html>
+<!-- istg i never knew claude could make such good websites -->
+<!-- also: if you're reading this in the source, claude wrote this whole thing. -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PurpleScope</title>
-  <meta name="description" content="PurpleScope - working towards building a better Kingdom. We work with public procurement bodies across the UK, helping deliver contracted work more efficiently. Email for eligibility." />
+  <meta name="description" content="PurpleScope. A B2G company that bids on and delivers UK public sector contracts." />
   <meta property="og:title" content="PurpleScope" />
-  <meta property="og:description" content="Working towards building a better Kingdom. Contract brokerage, bid writing and delivery for the UK public sector." />
+  <meta property="og:description" content="We bid on UK public sector contracts and deliver them through a trusted network." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/og-image.png" />
   <meta name="theme-color" content="#6d28d9" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%236d28d9'/%3E%3C/svg%3E" />
 
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -50,30 +51,27 @@
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
       border: 1px solid rgba(255,255,255,.08);
     }
-  .reveal{opacity:1;transform:translateY(20px);transition:transform .6s ease;will-change:transform;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-/* prevent color flicker on translucent surfaces: don't fade opacity on glass cards */
-.glass.reveal, .bg-white\/5.reveal{opacity:1;transform:translateY(12px);transition:transform .6s ease;}
-.glass.reveal.visible, .bg-white\/5.reveal.visible{transform:translateY(0);}
-.has-tooltip::after{content:attr(data-title);position:absolute;left:50%;top:-0.5rem;transform:translate(-50%,-100%);background:rgba(0,0,0,.7);padding:.25rem .5rem;border-radius:.375rem;font-size:10px;opacity:0;pointer-events:none;transition:opacity .2s ease;white-space:nowrap}
-.has-tooltip:hover::after{opacity:1}
-.cursor-purple{cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%236d28d9"/></svg>') 8 8, auto}
-/* apply custom cursor */
-body, a, button { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%236d28d9"/></svg>') 8 8, auto }
-#ctaEmail, #ctaEmail:hover { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%236d28d9"/></svg>') 8 8, auto !important }
+    .reveal{opacity:1;transform:translateY(20px);transition:transform .6s ease;will-change:transform;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .glass.reveal, .bg-white\/5.reveal{opacity:1;transform:translateY(12px);transition:transform .6s ease;}
+    .glass.reveal.visible, .bg-white\/5.reveal.visible{transform:translateY(0);}
+    .has-tooltip::after{content:attr(data-title);position:absolute;left:50%;top:-0.5rem;transform:translate(-50%,-100%);background:rgba(0,0,0,.7);padding:.25rem .5rem;border-radius:.375rem;font-size:10px;opacity:0;pointer-events:none;transition:opacity .2s ease;white-space:nowrap}
+    .has-tooltip:hover::after{opacity:1}
+    body, a, button { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%236d28d9"/></svg>') 8 8, auto }
+    #ctaEmail, #ctaEmail:hover { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="%236d28d9"/></svg>') 8 8, auto !important }
 
-/* light theme overrides (default is dark) */
-body.theme-light { background:#f7f7fb; color:#0b0b12; }
-body.theme-light .gradient-animate{ background: linear-gradient(180deg,#ffffff 0%, #f5f6fb 100%); }
-body.theme-light .glass{ background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.02)); border-color: rgba(0,0,0,.1); }
-body.theme-light .text-white\/90, body.theme-light .text-white\/80, body.theme-light .text-white\/70, body.theme-light .text-white\/60, body.theme-light .text-white { color:#111 !important; opacity:1 !important; }
-body.theme-light .border-white\/10{ border-color: rgba(0,0,0,.12) !important; }
-body.theme-light .bg-white\/5{ background-color: rgba(0,0,0,.04) !important; }
-body.theme-light .hover\:bg-white\/5:hover{ background-color: rgba(0,0,0,.06) !important; }
-body.theme-light .shadow-soft{ box-shadow: 0 10px 30px rgba(0,0,0,.08) !important; }
-body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 !important; opacity:0.65 !important; }
-.glass, .bg-white\/5 { transition: background-color .45s ease, border-color .45s ease, color .45s ease, box-shadow .45s ease; }
-</style>
+    /* light theme */
+    body.theme-light { background:#f7f7fb; color:#0b0b12; }
+    body.theme-light .gradient-animate{ background: linear-gradient(180deg,#ffffff 0%, #f5f6fb 100%); }
+    body.theme-light .glass{ background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.02)); border-color: rgba(0,0,0,.1); }
+    body.theme-light .text-white\/90, body.theme-light .text-white\/80, body.theme-light .text-white\/70, body.theme-light .text-white\/60, body.theme-light .text-white { color:#111 !important; opacity:1 !important; }
+    body.theme-light .border-white\/10{ border-color: rgba(0,0,0,.12) !important; }
+    body.theme-light .bg-white\/5{ background-color: rgba(0,0,0,.04) !important; }
+    body.theme-light .hover\:bg-white\/5:hover{ background-color: rgba(0,0,0,.06) !important; }
+    body.theme-light .shadow-soft{ box-shadow: 0 10px 30px rgba(0,0,0,.08) !important; }
+    body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 !important; opacity:0.65 !important; }
+    .glass, .bg-white\/5 { transition: background-color .45s ease, border-color .45s ease, color .45s ease, box-shadow .45s ease; }
+  </style>
 </head>
 <body class="bg-[#0f0f17] text-white antialiased">
   <!-- NAV -->
@@ -81,11 +79,11 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mt-4 flex items-center justify-between rounded-2xl glass px-4 py-3">
         <a href="#" class="flex items-center gap-2">
-          <span class="text-sm font-semibold tracking-wide text-white/90 ">PurpleScope</span>
+          <span class="text-sm font-semibold tracking-wide text-white/90">PurpleScope</span>
         </a>
         <nav class="hidden gap-8 text-sm text-white/80 md:flex">
-          <a href="#services" class="hover:text-white transition">Services</a>
-          <a href="#model" class="hover:text-white transition">Model</a>
+          <a href="#procurement" class="hover:text-white transition">Public Procurement</a>
+          <a href="#subcontractors" class="hover:text-white transition">Subcontractors</a>
           <a href="#about" class="hover:text-white transition">About</a>
           <a href="#contact" class="hover:text-white transition">Contact</a>
         </nav>
@@ -94,7 +92,7 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
             <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5"><path fill="currentColor" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
             <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 hidden"><path fill="currentColor" d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zm9.83-18.16l-1.79-1.79-1.8 1.79 1.8 1.79 1.79-1.79zM20 13h3v-2h-3v2zM6.76 19.16l-1.8 1.79 1.41 1.41 1.79-1.79-1.4-1.41zM17.24 19.16l1.4 1.41 1.79-1.79-1.41-1.41-1.78 1.79zM12 7a5 5 0 100 10 5 5 0 000-10zm-1-7h2v3h-2V0z"/></svg>
           </button>
-          <a href="#contact" class="hidden rounded-xl bg-brand-600 px-4 py-2 text-sm font-medium text-white shadow-soft transition hover:bg-brand-500 md:inline-block">Check eligibility</a>
+          <a href="#contact" class="hidden rounded-xl bg-brand-600 px-4 py-2 text-sm font-medium text-white shadow-soft transition hover:bg-brand-500 md:inline-block">Get in touch</a>
           <button id="menuBtn" class="inline-flex items-center rounded-xl border border-white/10 px-3 py-2 md:hidden" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
@@ -104,107 +102,89 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
     <!-- MOBILE MENU -->
     <div id="mobileMenu" class="mx-auto hidden max-w-7xl px-4 md:hidden">
       <div class="mt-2 rounded-2xl glass p-4">
-        <a href="#services" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Services</a>
-        <a href="#model" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Model</a>
+        <a href="#procurement" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Public Procurement</a>
+        <a href="#subcontractors" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Subcontractors</a>
         <a href="#about" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">About</a>
         <a href="#contact" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Contact</a>
-        <a href="#contact" class="mt-2 block rounded-xl bg-brand-600 px-3 py-2 text-center text-sm font-medium text-white shadow-soft transition hover:bg-brand-500">Contact us</a>
+        <a href="#contact" class="mt-2 block rounded-xl bg-brand-600 px-3 py-2 text-center text-sm font-medium text-white shadow-soft transition hover:bg-brand-500">Get in touch</a>
       </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="gradient-animate relative isolate pt-36">
+  <section class="gradient-animate relative isolate pt-36 pb-20">
     <div class="pointer-events-none absolute inset-0 -z-10 select-none opacity-30" aria-hidden="true">
       <svg class="absolute right-0 top-10 h-56 w-56 text-brand-700/30" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M37.7,-61.1C48.8,-55.6,57.2,-46.1,64.5,-35.1C71.8,-24.2,78,-12.1,78.9,0.5C79.7,13.1,75.2,26.1,67.6,36.7C60,47.4,49.3,55.7,37.5,62.1C25.7,68.5,12.8,73.1,1.1,71.2C-10.6,69.4,-21.2,61.1,-31,53.4C-40.8,45.7,-49.8,38.6,-55.2,29.5C-60.6,20.3,-62.3,9.2,-62.1,-1.9C-61.8,-13,-59.6,-26,-52.1,-35.7C-44.6,-45.5,-31.8,-52.1,-20,-57.3C-8.2,-62.5,2.7,-66.2,13.5,-65.3C24.3,-64.5,34.9,-59.1,37.7,-61.1Z" transform="translate(100 100)"/></svg>
     </div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto grid max-w-3xl gap-8 text-center">
+      <div class="mx-auto grid max-w-3xl gap-6 text-center">
         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Working Towards Building a Better Kingdom</h1>
-        <p class="text-lg text-white/70">PurpleScope works with public procurement bodies across the UK, helping deliver contracted work more efficiently for government and local authorities. We identify the right opportunities, build the proposals, and see them through to delivery.</p>
-        <div class="mt-2 flex items-center justify-center gap-3">
-          <a href="#contact" class="rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-500">Check eligibility</a>
-          <a href="#model" class="rounded-xl border border-white/10 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/5">Proposal writing</a>
+        <p class="text-lg text-white/70">We win government contracts and deliver them properly. Better public services, stronger local communities, and real accountability for every pound spent.</p>
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-3">
+          <a href="#cta" class="rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-500">Contact us</a>
+          <a href="#procurement" class="rounded-xl border border-white/10 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/5 transition">For public procurement</a>
+          <a href="#subcontractors" class="rounded-xl border border-white/10 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/5 transition">For subcontractors</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="relative z-10 py-20 reveal">
+  <!-- PUBLIC PROCUREMENT -->
+  <section id="procurement" class="relative z-10 py-20 reveal">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold">What We Do</h2>
-        <p class="mt-3 text-white/70">We work alongside public sector bodies to make procurement and delivery more efficient, from identifying the right opportunities through to proposal writing and execution.</p>
-      </div>
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="glass rounded-2xl p-6">
-          
-          <h3 class="mt-4 text-lg font-semibold">We Bid Ourselves</h3>
-          <p class="mt-2 text-sm text-white/70">We compete for public sector contracts in our own right, from tender discovery through to submission.</p>
-          <ul class="mt-4 list-inside list-disc text-sm text-white/70">
-            <li>Tender discovery & matching</li>
-            <li>Opportunity qualification</li>
-            <li>In‑house submissions</li>
-          </ul>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          
-          <h3 class="mt-4 text-lg font-semibold">We Help Other Companies Bid</h3>
-          <p class="mt-2 text-sm text-white/70">We bring that same experience to other UK businesses, helping them find and win the right opportunities.</p>
-          <ul class="mt-4 list-inside list-disc text-sm text-white/70">
-            <li>Opportunity matching</li>
-            <li>Eligibility screening</li>
-            <li>Introduction & handoff</li>
-          </ul>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          
-          <h3 class="mt-4 text-lg font-semibold">Bid Writing & Management</h3>
-          <p class="mt-2 text-sm text-white/70">We handle the bidding process end‑to‑end so partners can focus on delivery.</p>
-          <ul class="mt-4 list-inside list-disc text-sm text-white/70">
-            <li>Response strategy & authoring</li>
-            <li>Compliance & submission</li>
-            <li>Post‑tender clarifications</li>
-          </ul>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          
-          <h3 class="mt-4 text-lg font-semibold">Direct Acquisition & JV</h3>
-          <p class="mt-2 text-sm text-white/70">Once credibility is built, we bid in‑house or via joint ventures and deliver through a trusted subcontractor network.</p>
-          <ul class="mt-4 list-inside list-disc text-sm text-white/70">
-            <li>In‑house bids</li>
-            <li>Joint‑venture structuring</li>
-            <li>Subcontractor management</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MODEL -->
-  <section id="model" class="relative z-10 py-20 reveal">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold">Eligibility & Engagement</h2>
-        <p class="mt-3 text-white/70">Selective partnerships. We prioritise fit over volume.</p>
+        <h2 class="text-3xl font-bold">For Public Sector Buyers</h2>
+        <p class="mt-3 text-white/70">PurpleScope bids as the prime contractor and takes full accountability for delivery. You deal with one company. We manage everything behind it.</p>
       </div>
       <div class="mt-10 grid gap-6 md:grid-cols-3">
         <div class="glass rounded-2xl p-6">
-          <h3 class="text-lg font-semibold">1) Eligibility & Fit</h3>
-          <p class="mt-2 text-sm text-white/70">Quick, confidential screening to confirm capability, scope, and capacity. We only onboard a small number at a time.</p>
+          <h3 class="text-lg font-semibold">Single Point of Accountability</h3>
+          <p class="mt-2 text-sm text-white/70">You contract with PurpleScope. If something goes wrong, it is our problem to fix. One company responsible, no chasing multiple suppliers.</p>
         </div>
         <div class="glass rounded-2xl p-6">
-          <h3 class="text-lg font-semibold">2) Bid Writing & Strategy</h3>
-          <p class="mt-2 text-sm text-white/70">We lead proposal strategy, write the response, and align technicals with evaluation criteria for high scoring.</p>
+          <h3 class="text-lg font-semibold">How We Vet Our Network</h3>
+          <p class="mt-2 text-sm text-white/70">Every delivery partner is vetted before they join our network. We check track record, insurance, capacity, and compliance. We monitor performance on every contract and replace underperformers before they become your problem.</p>
         </div>
         <div class="glass rounded-2xl p-6">
-          <h3 class="text-lg font-semibold">3) Brokerage or Direct Delivery</h3>
-          <p class="mt-2 text-sm text-white/70">On award, we broker, co‑deliver through partners, or deliver directly via structured JVs - whichever creates the cleanest execution.</p>
+          <h3 class="text-lg font-semibold">Social Value Built In</h3>
+          <p class="mt-2 text-sm text-white/70">We build social value into every bid because it is scored, and we deliver on it because it matters. Local hiring, SME supply chains, and measurable community outcomes.</p>
         </div>
       </div>
-      <div class="mx-auto mt-10 max-w-3xl text-center text-sm text-white/60">
-        
+      <div class="mt-8 text-center">
+        <a href="#cta" class="inline-block rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-500">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBCONTRACTORS -->
+  <section id="subcontractors" class="relative z-10 py-20 reveal">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold">For Subcontractors</h2>
+        <p class="mt-3 text-white/70">PurpleScope wins the contracts. Our subcontractors deliver them. If you are a subcontractor, get in touch and tell us what you do. We will match you to the right opportunities as they come through.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">What You Get</h3>
+          <ul class="mt-3 grid gap-2 text-sm text-white/70">
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> We write and win the bids. You just deliver.</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> A steady pipeline of public sector work without chasing tenders yourself</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> Contract management, compliance, and governance handled for you</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> Exclusive access to contracts you would not see on your own</li>
+          </ul>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">Why Work Exclusively With Us</h3>
+          <ul class="mt-3 grid gap-2 text-sm text-white/70">
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> Priority placement on new contract awards</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> We build bids around your capabilities, not around whoever is available</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> Long term, repeat work instead of one-off projects</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-brand-500"></span> A real partnership where your track record grows with ours</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <a href="#cta" class="inline-block rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-500">Register your interest</a>
       </div>
     </div>
   </section>
@@ -215,11 +195,11 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
       <div class="grid items-center gap-10 md:grid-cols-2">
         <div>
           <h2 class="text-3xl font-bold">About PurpleScope</h2>
-          <p class="mt-4 text-white/70">PurpleScope works with government and local authorities to help public sector contracts run more efficiently. We find opportunities, build proposals that meet what evaluators are looking for, and follow through on delivery. That means public money going to work that's well planned and well executed, which is good for the Kingdom.</p>
+          <p class="mt-4 text-white/70">PurpleScope is a business to government company. We bid on UK public sector contracts as the prime contractor and take full responsibility for delivery. We manage a vetted network of delivery partners so that public money goes to work that is well planned and well executed.</p>
           <ul class="mt-6 grid gap-3 text-sm text-white/70">
-            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 rounded-full bg-brand-500"></span> Outcome‑first</li>
-            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 rounded-full bg-brand-500"></span> Transparent metrics</li>
-            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 rounded-full bg-brand-500"></span> Senior operators only</li>
+            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 rounded-full bg-brand-500"></span> Prime contractor, fully accountable</li>
+            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 rounded-full bg-brand-500"></span> Vetted delivery network with ongoing performance monitoring</li>
+            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 rounded-full bg-brand-500"></span> Social value and transparent reporting</li>
           </ul>
         </div>
         <div class="relative">
@@ -227,12 +207,12 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
           <div class="glass rounded-3xl p-6">
             <div class="grid grid-cols-2 gap-4">
               <div class="rounded-2xl bg-white/5 p-5">
-                <p class="text-2xl font-bold">Broker</p>
-                <p class="text-xs text-white/60">Match & enable</p>
+                <p class="text-2xl font-bold">Find</p>
+                <p class="text-xs text-white/60">Opportunities</p>
               </div>
               <div class="rounded-2xl bg-white/5 p-5">
-                <p class="text-2xl font-bold">Acquire</p>
-                <p class="text-xs text-white/60">Bid direct or JV</p>
+                <p class="text-2xl font-bold">Win</p>
+                <p class="text-xs text-white/60">As prime</p>
               </div>
               <div class="rounded-2xl bg-white/5 p-5">
                 <p class="text-2xl font-bold">Deliver</p>
@@ -250,15 +230,15 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
   </section>
 
   <!-- CTA -->
-  <section class="relative z-10 py-20 reveal">
+  <section id="cta" class="relative z-10 py-20 reveal">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
       <div class="grid items-center gap-8 rounded-3xl bg-gradient-to-tr from-brand-700/40 to-brand-500/20 p-8 shadow-soft md:grid-cols-2 md:p-12">
         <div>
           <h3 class="text-2xl font-bold">Ready When You Are</h3>
-          <p class="mt-2 text-white/80">We take on a limited number of opportunities at a time, so every one gets full attention. Email us for an eligibility review. If there's a fit, we move quickly.</p>
+          <p class="mt-2 text-white/80">Whether you are a subcontractor looking for a steady pipeline or a public sector body looking for a capable prime, get in touch.</p>
         </div>
         <div class="glass rounded-2xl p-4 text-center">
-          <a id="ctaEmail" href="#" role="button" class="relative has-tooltip text-base underline-offset-4" data-title="Copy" aria-label="Copy email to clipboard">eligibility@purplescope.uk</a>
+          <a id="ctaEmail" href="#" role="button" class="relative has-tooltip text-base underline underline-offset-4 decoration-white/40 hover:decoration-white" data-title="Copy" aria-label="Copy email to clipboard">eligibility@purplescope.uk</a>
         </div>
       </div>
     </div>
@@ -274,7 +254,7 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
             <p class="text-sm text-white/70">Email <a href="mailto:eligibility@purplescope.uk" class="underline decoration-white/30 hover:decoration-white">eligibility@purplescope.uk</a></p>
           </div>
           <div class="space-y-2 md:pl-6 md:border-l md:border-white/10">
-            <h4 class="text-lg font-semibold">Locations</h4>
+            <h4 class="text-lg font-semibold">Location</h4>
             <p class="text-sm text-white/70">Luton, UK</p>
           </div>
         </div>
@@ -290,24 +270,18 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col items-start justify-between gap-4 text-sm text-white/60 md:flex-row md:items-center">
         <p>© <span id="y"></span> PurpleScope. All rights reserved.</p>
-        <!-- footer links removed -->
-</div>
-<div class="mt-2 text-xs text-white/40 md:text-center opacity-70">
-  Disclaimer: Results vary and success is not guaranteed. All bids and proposals are subject to evaluation criteria and buyer discretion.
-</div>
+      </div>
+      <div class="mt-2 text-xs text-white/40 md:text-center opacity-70">
+        Disclaimer: Results vary and success is not guaranteed. All bids and proposals are subject to evaluation criteria and buyer discretion.
       </div>
     </div>
-  
-</footer>
+  </footer>
 
-  <!-- SINGLE SCRIPT: MENU + TESTS -->
   <script>
     (function () {
-      // set year
       const yearEl = document.getElementById('y');
       if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-      // menu toggle (single declaration to avoid redeclaration errors)
       const menuBtn = document.getElementById('menuBtn');
       const mobileMenu = document.getElementById('mobileMenu');
       if (menuBtn && mobileMenu) {
@@ -318,27 +292,7 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
         });
       }
 
-      // smoke tests (non-intrusive, console-only)
-      console.groupCollapsed('PurpleScope Limited  -  Smoke Tests');
-      console.assert(document.title.includes('PurpleScope'), 'Title is missing expected text');
-      console.assert(!!document.getElementById('services'), '#services section missing');
-      console.assert(!!menuBtn, '#menuBtn not found');
-      console.assert(!!mobileMenu, '#mobileMenu not found');
-      if (menuBtn && mobileMenu) {
-        const wasHidden = mobileMenu.classList.contains('hidden');
-        menuBtn.click();
-        console.assert(wasHidden !== mobileMenu.classList.contains('hidden'), 'Menu toggle failed');
-        menuBtn.click(); // revert
-      }
-      console.assert(!!yearEl && yearEl.textContent && yearEl.textContent.length >= 4, 'Year not set in footer');
-      // test: no .reveal on .glass cards (to avoid opacity flicker)
-      (function(){
-        const bad = Array.from(document.querySelectorAll('.glass')).some(el=>el.classList.contains('reveal'));
-        console.assert(!bad, 'Glass cards should not have reveal class');
-      })();
-      console.groupEnd();
-
-      // smooth scroll for internal links
+      // smooth scroll
       document.querySelectorAll('a[href^="#"]').forEach(a=>{
         a.addEventListener('click',e=>{
           const href = a.getAttribute('href') || '';
@@ -358,7 +312,7 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
         });
       });
 
-      // theme toggle (default dark)
+      // theme toggle
       const themeBtn = document.getElementById('themeToggle');
       const iconMoon = document.getElementById('iconMoon');
       const iconSun = document.getElementById('iconSun');
@@ -371,7 +325,6 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
         }
         try { localStorage.setItem('ps-theme', mode); } catch (_) {}
       };
-      // init
       try {
         const saved = localStorage.getItem('ps-theme');
         applyTheme(saved === 'light' ? 'light' : 'dark');
@@ -381,15 +334,12 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
         applyTheme(isLight ? 'dark' : 'light');
       });
 
-      // copy email on clicking link (no mail client)
+      // copy email
       const emailLink = document.getElementById('ctaEmail');
       if (emailLink) {
         const email = 'eligibility@purplescope.uk';
         const doCopy = (text) => {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            return navigator.clipboard.writeText(text);
-          }
-          // fallback: execCommand
+          if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text);
           return new Promise((resolve)=>{
             const ta=document.createElement('textarea');
             ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
@@ -410,58 +360,135 @@ body.theme-light .text-white\/50, body.theme-light .text-white\/40 { color:#111 
           }
         });
       }
-
-      // copy email (no permission prompt)
-      const copyBtn = document.getElementById('copyEmail');
-      if (copyBtn) {
-        const email = 'eligibility@purplescope.uk';
-        const doCopy = (text) => {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            return navigator.clipboard.writeText(text);
-          }
-          // fallback
-          return new Promise((resolve)=>{
-            const ta=document.createElement('textarea');
-            ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
-            document.body.appendChild(ta); ta.focus(); ta.select();
-            try { document.execCommand('copy'); } catch(e) {}
-            document.body.removeChild(ta); resolve();
-          });
-        };
-        copyBtn.addEventListener('click', async () => {
-          try {
-            await doCopy(email);
-            copyBtn.setAttribute('data-title','Copied!');
-            setTimeout(()=>copyBtn.setAttribute('data-title','Copy'),1200);
-          } catch(e) {
-            copyBtn.setAttribute('data-title','Copy manually');
-            setTimeout(()=>copyBtn.setAttribute('data-title','Copy'),1500);
-          }
-        });
-      }
     })();
   </script>
-  <!-- istg i never knew claude could make such good websites-->
-  <!-- also: if you're reading this in the source, claude wrote this whole thing. -->
-<script>
-// scroll reveal that re-triggers when sections re-enter the viewport
-(function(){
-  // ensure targets have the reveal class (sections and cards)
-  document.querySelectorAll('section').forEach(el => el.classList.add('reveal'));
+  <script>
+    // scroll reveal
+    (function(){
+      document.querySelectorAll('section').forEach(el => el.classList.add('reveal'));
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+          else entry.target.classList.remove('visible');
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    })();
+  </script>
+  <script>
+    // easter egg: press e 6+ times
+    (function(){
+      let eCount = 0;
+      let timer = null;
+      let overlay = null;
+      let totalPresses = 0;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        // remove on exit so animation plays again next time
-        entry.target.classList.remove('visible');
+      function createOverlay() {
+        overlay = document.createElement('div');
+        overlay.id = 'easterEgg';
+        overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;pointer-events:none;';
+        overlay.innerHTML = `
+          <div id="eeWrap" style="position:relative;display:flex;align-items:center;justify-content:center;">
+            <svg id="eeRays" width="400" height="400" viewBox="0 0 400 400" style="position:absolute;opacity:0;transition:opacity .4s ease;">
+              ${Array.from({length:12},(_,i)=>{
+                const angle = i * 30;
+                const rad = angle * Math.PI / 180;
+                const x1 = 200 + Math.cos(rad) * 60;
+                const y1 = 200 + Math.sin(rad) * 60;
+                const x2 = 200 + Math.cos(rad) * 180;
+                const y2 = 200 + Math.sin(rad) * 180;
+                return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="url(#eeGrad)" stroke-width="2" stroke-linecap="round" opacity="0.7">
+                  <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="8s" repeatCount="indefinite"/>
+                </line>`;
+              }).join('')}
+              <defs>
+                <linearGradient id="eeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#a855f7" stop-opacity="0"/>
+                  <stop offset="50%" stop-color="#d8b4fe" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span id="eePound" style="font-size:120px;font-weight:900;color:#a855f7;opacity:0;filter:blur(20px);transition:opacity .5s ease,filter .5s ease,font-size .3s ease,text-shadow .5s ease;user-select:none;">£</span>
+          </div>
+        `;
+        document.body.appendChild(overlay);
       }
-    });
-  }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
 
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-})();
-</script>
+      function updateEgg(presses) {
+        if (!overlay) createOverlay();
+        const pound = document.getElementById('eePound');
+        const rays = document.getElementById('eeRays');
+        if (!pound || !rays) return;
+
+        const extra = presses - 6;
+        const clarity = Math.min(extra / 8, 1);
+
+        pound.style.opacity = 0.3 + clarity * 0.7;
+        pound.style.filter = `blur(${20 - clarity * 20}px)`;
+        pound.style.fontSize = (120 + extra * 5) + 'px';
+        pound.style.textShadow = `0 0 ${30 + clarity * 40}px rgba(168,85,247,${0.3 + clarity * 0.5}), 0 0 ${60 + clarity * 80}px rgba(168,85,247,${0.2 + clarity * 0.3})`;
+
+        rays.style.opacity = clarity * 0.9;
+      }
+
+      function hideEgg() {
+        if (!overlay) return;
+        const pound = document.getElementById('eePound');
+        const rays = document.getElementById('eeRays');
+        if (!pound || !rays) return;
+
+        // Phase 1: slowly shrink back to original size, fade rays
+        pound.style.transition = 'font-size 1.2s ease-in, text-shadow 1.2s ease-in';
+        pound.style.fontSize = '120px';
+        pound.style.textShadow = '0 0 30px rgba(168,85,247,0.3), 0 0 60px rgba(168,85,247,0.2)';
+        rays.style.transition = 'opacity 1s ease-in';
+        rays.style.opacity = '0';
+
+        // Phase 2: once shrunk, do the star-zap flash
+        setTimeout(() => {
+          if (!overlay) return;
+          pound.style.transition = 'none';
+          void pound.offsetWidth;
+          pound.style.color = '#fff';
+          pound.style.textShadow = '0 0 80px rgba(255,255,255,1), 0 0 120px rgba(168,85,247,1), 0 0 200px rgba(168,85,247,0.8)';
+          pound.style.fontSize = '160px';
+          pound.style.opacity = '1';
+          pound.style.filter = 'blur(0px) brightness(3)';
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              pound.style.transition = 'font-size .25s ease-in, opacity .25s ease-in, filter .25s ease-in, text-shadow .2s ease-in';
+              pound.style.fontSize = '0px';
+              pound.style.opacity = '0';
+              pound.style.filter = 'blur(8px) brightness(0)';
+              pound.style.textShadow = '0 0 0px rgba(255,255,255,0)';
+
+              setTimeout(() => {
+                if (overlay) { overlay.remove(); overlay = null; }
+              }, 350);
+            });
+          });
+        }, 1300);
+
+        totalPresses = 0;
+      }
+
+      document.addEventListener('keydown', (ev) => {
+        if (ev.target.tagName === 'INPUT' || ev.target.tagName === 'TEXTAREA') return;
+        if (ev.key.toLowerCase() !== 'e') { eCount = 0; return; }
+        eCount++;
+        clearTimeout(timer);
+        timer = setTimeout(() => { eCount = 0; }, 800);
+
+        if (eCount >= 6) {
+          totalPresses++;
+          updateEgg(5 + totalPresses);
+          clearTimeout(window._eeHide);
+          window._eeHide = setTimeout(hideEgg, 3000);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
